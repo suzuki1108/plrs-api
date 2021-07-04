@@ -14,10 +14,11 @@ class CreateAffiliatesTable extends Migration
     public function up()
     {
         Schema::create('affiliates', function (Blueprint $table) {
-            $table->id();
-            $table->foreign('language_id')->references('id')->on('languages');
+            $table->increments('id');
+            $table->integer('language_id')->unsigned();
             $table->integer('category_id');
             $table->string('url');
+            $table->foreign('language_id')->references('id')->on('languages');
             $table->timestamps();
         });
     }

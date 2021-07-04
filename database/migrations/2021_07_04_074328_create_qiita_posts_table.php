@@ -14,9 +14,11 @@ class CreateQiitaPostsTable extends Migration
     public function up()
     {
         Schema::create('qiita_posts', function (Blueprint $table) {
-            $table->id();
-            $table->foreign('language_id')->references('id')->on('languages');
+            $table->increments('id');
+            $table->integer('language_id')->unsigned();
+            $table->integer('number_of_posts');
             $table->timestamps();
+            $table->foreign('language_id')->references('id')->on('languages');
         });
     }
 

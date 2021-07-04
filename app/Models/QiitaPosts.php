@@ -6,7 +6,7 @@ use App\Models\Language;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Qiita_posts extends Model
+class QiitaPosts extends Model
 {
     use HasFactory;
 

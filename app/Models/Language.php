@@ -11,8 +11,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Language extends Model
 {
     use HasFactory;
-    const CREATED_AT = null;
-    const UPDATED_AT = null;
 
     public function affiliates(){
         return $this->hasMany(Affiliate::class);

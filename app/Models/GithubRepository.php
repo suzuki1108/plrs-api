@@ -6,7 +6,7 @@ use App\Models\Language;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Github_repository extends Model
+class GithubRepository extends Model
 {
     use HasFactory;
 

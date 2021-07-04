@@ -14,7 +14,7 @@ class LanguageSeeder extends Seeder
      */
     public function run()
     {
-        $langList = ['C言語', 'Java', 'PHP', 'Ruby', 'C#', 'JavaScript', 'C++', 'Go', 'Python'];
+        $langList = ['C', 'Java', 'PHP', 'Ruby', 'C#', 'JavaScript', 'C++', 'Go', 'Python', 'Kotlin', 'Swift', 'Perl', 'Scala', 'R', 'VBA', 'COBOL', 'Rust', 'TypeScript', 'CoffeeScript', 'Objective-C', 'Dart', 'Elixir', 'DM', 'Groovy'];
         foreach($langList as $lang){
             $language = new Language();
             $language->language_name = $lang;

@@ -14,8 +14,11 @@ class CreateGithubRepositoriesTable extends Migration
     public function up()
     {
         Schema::create('github_repositories', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->integer('language_id')->unsigned();
+            $table->integer('number_of_repositories');
             $table->timestamps();
+            $table->foreign('language_id')->references('id')->on('languages');
         });
     }
 
