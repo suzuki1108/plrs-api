@@ -5,6 +5,11 @@
 $ git clone git@github.com:fact11824/plrs-laravel.git
 ```
 
+## .envファイル作成
+```
+$ cp .env.example .env
+```
+
 ## composer install
 ```
 $ composer install
