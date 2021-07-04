@@ -3,6 +3,10 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\LanguageSeeder;
+use Database\Seeders\AffiliateSeeder;
+use Database\Seeders\QiitaPostsSeeder;
+use Database\Seeders\GithubRepositorySeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +17,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call(LanguageSeeder::class);
+        $this->call(AffiliateSeeder::class);
+        $this->call(GithubRepositorySeeder::class);
+        $this->call(QiitaPostsSeeder::class);
     }
 }
