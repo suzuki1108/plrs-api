@@ -15,6 +15,9 @@ class CreateAffiliatesTable extends Migration
     {
         Schema::create('affiliates', function (Blueprint $table) {
             $table->id();
+            $table->foreign('language_id')->references('id')->on('languages');
+            $table->integer('category_id');
+            $table->string('url');
             $table->timestamps();
         });
     }
