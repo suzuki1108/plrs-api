@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\DailyQiitaRankController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::get('/test', [TestController::class, 'index']);
+Route::get('/dailyQiitaRank', [DailyQiitaRankController::class, 'index']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
