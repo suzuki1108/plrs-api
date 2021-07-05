@@ -16,9 +16,16 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/test', [TestController::class, 'index']);
+
 Route::get('/dailyQiitaRank', [DailyQiitaRankController::class, 'index']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+// CORSを許可
+Route::middleware(['cors'])->group(function () {
+
+    Route::get('/test', [TestController::class, 'index']);
+
 });
