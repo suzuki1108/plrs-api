@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class DailyQiitaRankController extends Controller
 {
-    public function index(){
-        return response()->json(QiitaPosts::dailyRank(),200);
+    public function index(int $days){
+        return response()->json(QiitaPosts::dailyRank($days),200);
     }
 }
