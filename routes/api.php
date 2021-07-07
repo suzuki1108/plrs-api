@@ -27,6 +27,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::middleware(['cors'])->group(function () {
 
     Route::get('/test', [TestController::class, 'index']);
-    Route::get('/dailyQiitaRank', [DailyQiitaRankController::class, 'index']);
+    Route::get('/dailyQiitaRank/{days}', [DailyQiitaRankController::class, 'index']);
 
 });
