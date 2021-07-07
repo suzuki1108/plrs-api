@@ -1,9 +1,14 @@
 <?php
 
-use App\Http\Controllers\DailyQiitaRankController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\DailyQiitaRankController;
+use App\Http\Controllers\DailyGithubRankController;
+use App\Http\Controllers\WeeklyQiitaRankController;
+use App\Http\Controllers\MonthlyQiitaRankController;
+use App\Http\Controllers\WeeklyGithubRankController;
+use App\Http\Controllers\MonthlyGithubRankController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,5 +33,10 @@ Route::middleware(['cors'])->group(function () {
 
     Route::get('/test', [TestController::class, 'index']);
     Route::get('/dailyQiitaRank/{days}', [DailyQiitaRankController::class, 'index']);
+    Route::get('/weeklyQiitaRank/{week}', [WeeklyQiitaRankController::class, 'index']);
+    Route::get('/monthlyQiitaRank/{month}', [MonthlyQiitaRankController::class, 'index']);
 
+    Route::get('/dailyGithubRank/{days}', [DailyGithubRankController::class, 'index']);
+    Route::get('/weeklyGithubRank/{week}', [WeeklyGithubRankController::class, 'index']);
+    Route::get('/monthlyGithubRank/{month}', [MonthlyGithubRankController::class, 'index']);
 });
