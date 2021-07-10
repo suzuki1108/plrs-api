@@ -14,4 +14,5 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('affiliate', AffiliatesController::class);
     $router->resource('language', LanguagesController::class);
+    $router->resource('apikey', ApikeysController::class);
 });

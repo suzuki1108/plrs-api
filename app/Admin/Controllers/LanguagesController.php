@@ -28,6 +28,9 @@ class LanguagesController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('language_name', __('Language name'));
+        $grid->column('img_url', __('Img url'));
+        $grid->column('catch_phrase', __('Catch phrase'));
+        $grid->column('description', __('Description'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -46,6 +49,9 @@ class LanguagesController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('language_name', __('Language name'));
+        $show->field('img_url', __('Img url'));
+        $show->field('catch_phrase', __('Catch phrase'));
+        $show->field('description', __('Description'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -62,6 +68,9 @@ class LanguagesController extends AdminController
         $form = new Form(new Language());
 
         $form->text('language_name', __('Language name'));
+        $form->text('img_url', __('Img url'));
+        $form->text('catch_phrase', __('Catch phrase'));
+        $form->text('description', __('Description'));
 
         return $form;
     }
