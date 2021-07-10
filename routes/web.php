@@ -13,8 +13,3 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/test', [TestController::class, 'index']);
-
-Route::get('/', function () {
-    return view('welcome');
-});
