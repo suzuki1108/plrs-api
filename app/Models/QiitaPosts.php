@@ -56,7 +56,10 @@ class QiitaPosts extends Model
     private static function getQuery(string $baseDate, string $afterBaseDate, string $lastBaseDate, string $afterLastBaseDate): string{
         return <<<EOF
             SELECT
-                language_name, 
+                language_name,
+                img_url,
+                catch_phrase,
+                description,
                 basedate.number_of_posts - beforedate.number_of_posts AS incremental
             FROM (
                 SELECT *
