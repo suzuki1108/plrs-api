@@ -25,7 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('qiita:posts')->dailyAt('00:00');
-        $schedule->command('guthub:repositories')->dailyAt('00:10');
+        $schedule->command('github:repositories')->dailyAt('00:10');
     }
 
     /**
