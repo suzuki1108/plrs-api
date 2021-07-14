@@ -2,9 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
 use App\Http\Controllers\DailyQiitaRankController;
 use App\Http\Controllers\DailyGithubRankController;
+use App\Http\Controllers\LanguageDetailController;
 use App\Http\Controllers\WeeklyQiitaRankController;
 use App\Http\Controllers\MonthlyQiitaRankController;
 use App\Http\Controllers\WeeklyGithubRankController;
@@ -38,4 +38,6 @@ Route::middleware(['cors'])->group(function () {
     Route::get('/dailyGithubRank/{days}', [DailyGithubRankController::class, 'index']);
     Route::get('/weeklyGithubRank/{week}', [WeeklyGithubRankController::class, 'index']);
     Route::get('/monthlyGithubRank/{month}', [MonthlyGithubRankController::class, 'index']);
+
+    Route::get('/getLanguageDetail/{languageId}', [LanguageDetailController::class, 'index']);
 });

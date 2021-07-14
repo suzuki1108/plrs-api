@@ -56,6 +56,7 @@ class QiitaPosts extends Model
     private static function getQuery(string $baseDate, string $afterBaseDate, string $lastBaseDate, string $afterLastBaseDate): string{
         return <<<EOF
             SELECT
+                la.id,
                 language_name,
                 img_url,
                 catch_phrase,

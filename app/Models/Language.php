@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Affiliate;
 use App\Models\Qiita_posts;
+use App\Models\LanguageDetail;
 use App\Models\Github_repository;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -22,5 +23,9 @@ class Language extends Model
 
     public function qiita_posts(){
         return $this->hasMany(Qiita_posts::class);
+    }
+
+    public function language_detail(){
+        return $this->hasMany(LanguageDetail::class);
     }
 }

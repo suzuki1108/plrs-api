@@ -15,4 +15,5 @@ Route::group([
     $router->resource('affiliate', AffiliatesController::class);
     $router->resource('language', LanguagesController::class);
     $router->resource('apikey', ApikeysController::class);
+    $router->resource('language_detail', LanguageDetailController::class);
 });
