@@ -100,12 +100,6 @@ class LanguageSeeder extends Seeder
                 'description' => 'ここにRの詳細説明が入ります。'
             ],
             [
-                'name' => 'VBA',
-                'img' => 'https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/c12d9d0fc654311c657b45784a598331e39ebaf6/medium.jpg?1598801339',
-                'catch_phrase' => 'ここにVBAのキャッチフレーズが入ります。',
-                'description' => 'ここにVBAの詳細説明が入ります。'
-            ],
-            [
                 'name' => 'COBOL',
                 'img' => 'https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/bba0c0e84a464f376ab46f4780f2d92d65d8dbf8/medium.jpg?1468151862',
                 'catch_phrase' => 'ここにCOBOLのキャッチフレーズが入ります。',
@@ -122,12 +116,6 @@ class LanguageSeeder extends Seeder
                 'img' => 'https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/5dd0a3684d0ad54cef6b7cd6c52918be777435a3/medium.jpg?1513494620',
                 'catch_phrase' => 'ここにTypeScriptのキャッチフレーズが入ります。',
                 'description' => 'ここにTypeScriptの詳細説明が入ります。'
-            ],
-            [
-                'name' => 'CoffeeScript',
-                'img' => 'https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/af72c984fe0919a11966386c678d77f52886acaf/medium.jpg?1517585375',
-                'catch_phrase' => 'ここにCoffeeScriptのキャッチフレーズが入ります。',
-                'description' => 'ここにCoffeeScriptの詳細説明が入ります。'
             ],
             [
                 'name' => 'Objective-C',
