@@ -61,7 +61,8 @@ class GithubRepository extends Model
                 img_url,
                 catch_phrase,
                 description,
-                basedate.number_of_repositories - beforedate.number_of_repositories AS incremental
+                basedate.number_of_repositories - beforedate.number_of_repositories AS incremental,
+                basedate.number_of_repositories as total_repositories
             FROM (
                 SELECT *
                 FROM github_repositories gr 
