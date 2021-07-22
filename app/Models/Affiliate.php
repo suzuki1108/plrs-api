@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Models\Language;
-use App\Models\LanguageDetail;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -16,7 +15,10 @@ class Affiliate extends Model
     }
 
     public static function getRandomAffiliateURL(){
-        $affiliate = self::where('category_id', config('const.categories.schools'))->get();
-        return ['affiliateTag' => $affiliate->shuffle()->first()->url];
+        $affiliate = self::where('category_id', config('const.categories.schools'))->get()->shuffle();
+        return [
+            'affiliateTag1' => $affiliate->first()->url,
+            'affiliateTag2' => $affiliate->last()->url,
+        ];
     }
 }
