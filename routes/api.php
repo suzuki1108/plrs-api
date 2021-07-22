@@ -9,6 +9,7 @@ use App\Http\Controllers\WeeklyQiitaRankController;
 use App\Http\Controllers\MonthlyQiitaRankController;
 use App\Http\Controllers\WeeklyGithubRankController;
 use App\Http\Controllers\MonthlyGithubRankController;
+use App\Http\Controllers\RandomAffiliateUrlController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +41,6 @@ Route::middleware(['cors'])->group(function () {
     Route::get('/monthlyGithubRank/{month}', [MonthlyGithubRankController::class, 'index']);
 
     Route::get('/getLanguageDetail/{languageId}', [LanguageDetailController::class, 'index']);
+
+    Route::get('getRandomAffiliateUrl', [RandomAffiliateUrlController::class, 'index']);
 });

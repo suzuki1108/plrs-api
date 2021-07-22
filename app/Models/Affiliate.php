@@ -14,4 +14,9 @@ class Affiliate extends Model
     public function language(){
        return $this->belongsTo(Language::class); 
     }
+
+    public static function getRandomAffiliateURL(){
+        $affiliate = self::where('category_id', config('const.categories.schools'))->get();
+        return ['affiliateTag' => $affiliate->shuffle()->first()->url];
+    }
 }
