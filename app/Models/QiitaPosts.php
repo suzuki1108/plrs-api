@@ -61,7 +61,8 @@ class QiitaPosts extends Model
                 img_url,
                 catch_phrase,
                 description,
-                basedate.number_of_posts - beforedate.number_of_posts AS incremental
+                basedate.number_of_posts - beforedate.number_of_posts AS incremental,
+                basedate.number_of_posts as total_posts
             FROM (
                 SELECT *
                 FROM qiita_posts qp 
