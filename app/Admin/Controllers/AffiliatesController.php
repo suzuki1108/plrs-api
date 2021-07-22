@@ -67,7 +67,7 @@ class AffiliatesController extends AdminController
 
         $form->number('language_id', __('Language id'));
         $form->number('category_id', __('Category id'));
-        $form->url('url', __('Url'));
+        $form->text('url', __('Url'));
 
         return $form;
     }
