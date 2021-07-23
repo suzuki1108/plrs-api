@@ -31,7 +31,7 @@ class LanguageDetailController extends AdminController
         $grid->column('feature', __('Feature'));
         $grid->column('ability_todo', __('Ability todo'));
         $grid->column('annual_income', __('Annual income'));
-        $grid->column('job_offer', __('Job offer'));
+        $grid->column('review', __('review'));
         $grid->column('certificate', __('Certificate'));
         $grid->column('how_to_study', __('How to study'));
         $grid->column('created_at', __('Created at'));
@@ -55,7 +55,7 @@ class LanguageDetailController extends AdminController
         $show->field('feature', __('Feature'));
         $show->field('ability_todo', __('Ability todo'));
         $show->field('annual_income', __('Annual income'));
-        $show->field('job_offer', __('Job offer'));
+        $show->field('review', __('review'));
         $show->field('certificate', __('Certificate'));
         $show->field('how_to_study', __('How to study'));
         $show->field('created_at', __('Created at'));
@@ -77,7 +77,7 @@ class LanguageDetailController extends AdminController
         $form->text('feature', __('Feature'));
         $form->text('ability_todo', __('Ability todo'));
         $form->text('annual_income', __('Annual income'));
-        $form->text('job_offer', __('Job offer'));
+        $form->text('review', __('review'));
         $form->text('certificate', __('Certificate'));
         $form->text('how_to_study', __('How to study'));
 

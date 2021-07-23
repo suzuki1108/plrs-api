@@ -23,15 +23,11 @@ class LanguageDetail extends Model
             'feature' => $detail->feature,
             'ability_todo' => $detail->ability_todo,
             'annual_income' => $detail->annual_income,
-            'job_offer' => $detail->job_offer,
+            'review' => $detail->review,
             'certificate' => $detail->certificate,
             'how_to_study' => $detail->how_to_study,
-            'affiliate' => Affiliate::where('language_id', $languageId)->get()->map(function($affiliate){
-                return[
-                    'category_id' => $affiliate->category_id,
-                    'url' => $affiliate->url
-                ];
-            })
+            'created_at' => $detail->created_at,
+            'updated_at' => $detail->updated_at,
         ];
     }
 }

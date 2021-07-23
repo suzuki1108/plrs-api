@@ -19,7 +19,7 @@ class CreateLanguageDetailsTable extends Migration
             $table->text('feature');
             $table->text('ability_todo');
             $table->text('annual_income');
-            $table->text('job_offer');
+            $table->text('review');
             $table->text('certificate');
             $table->text('how_to_study');
             $table->timestamps();
