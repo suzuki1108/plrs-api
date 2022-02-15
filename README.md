@@ -1,59 +1,11 @@
-# 管理画面について
-以下環境構築実行後に、
-```
-http://localhost:8000/admin/
-```
-にアクセス。
-ユーザ名、パスワード共にadminで管理画面に入れます。
+# 概要
 
-## アフィリエイトURLテーブル編集画面
-```
-http://localhost:8000/admin/affiliate
-```
-## プログラミング言語マスタ編集画面
-```
-http://localhost:8000/admin/language
-```
+[プログラミング言語ランキングサイト](https://programming-ranking.com/)のバックエンド
 
-# 環境構築手順(ローカル用)
+フロントは友人の[kazuma24](https://github.com/kazuma24)さんが作成
 
-## ローカルにクローン
-```
-$ git clone git@github.com:fact11824/plrs-laravel.git
-```
+毎日夜間にバッチ処理でGitHubの言語別リポジトリ数とQiitaの言語別記事数を取得し、DBに格納し、フロントでランキング形式にするシステム
 
-## .envファイル作成
-```
-$ cp .env.example .env
-```
-
-## composer install
-```
-$ composer install
-```
-
-## APP_KEY ファイルに .env 値を設定する
-```
-$ php artisan key:generate
-```
-
-## DBのマイグレーションとシーディング
-```
-$ php artisan migrate
-
-$ php artisan db:seed
-```
-
-## ローカルホスト起動
-```
-$ php artisan serve
-```
-
-## 起動確認
-```
-http://127.0.0.1:8000
-```
-にアクセス
-
- 
- 
+## 使用技術
+- PHP(Laravel)
+- laravel-admin
